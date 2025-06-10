@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EZY SHOP - Product Details</title>
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+    <header>
+        <h1>EZY SHOP</h1>
+    </header>
+
+    <main>
+        <div class="product-container">
+            <div class="product-image">
+                <img id="productImage" src="" alt="Product Image">
+            </div>
+            <div class="product-details">
+                <h2 id="productName"></h2>
+                <p class="price" id="productPrice"></p>
+                <div class="rating">★★★★☆ (<span id="reviewCount">0</span> reviews)</div>
+                <p class="description" id="productDescription"></p>
+                
+                <div class="product-specs" id="productSpecs">
+                    <h3>Specifications</h3>
+                    <ul id="specsList"></ul>
+                </div>
+                
+                <div class="shipping-info">
+                    <h3>Shipping Information</h3>
+                    <p>• Free shipping on orders over $50</p>
+                    <p>• Estimated delivery: 3-5 business days</p>
+                    <p>• 30-day return policy</p>
+                </div>
+                
+                <button id="buyNowBtn" class="buy-now-btn">Buy Now</button>
+            </div>
+        </div>
+
+        <!-- Checkout Form (initially hidden) -->
+        <div id="checkoutForm" class="checkout-form-container">
+            <h2>Checkout</h2>
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="mobile">Mobile Number:</label>
+                    <input type="tel" id="mobile" name="mobile" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">Shipping Address:</label>
+                    <textarea id="address" name="address" rows="3" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Payment Method:</label>
+                    <div class="payment-options">
+                        <label>
+                            <input type="radio" name="payment" value="cod" checked> Cash on Delivery
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="submit-order-btn">Place Order</button>
+                    <button type="button" id="cancelBtn" class="cancel-btn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="product.js"></script>
+</body>
+</html>
